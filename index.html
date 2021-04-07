@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Journey, Show Me Again CMATW for Steam</title>
+    <style type="text/css">
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 95vw;
+            min-height: 95vh;
+            font-size: 16px;
+            font-family: 'segoe UI', 'Hiragino Maru Gothic ProN', Meiryo, Arial, sans-serif;
+            background-color: #333;
+            color:#ddd;
+        }
+        div.container{
+            text-align: center;
+        }
+        .information{
+            font-size: 16px;
+            font-weight: normal;
+            color:#666;
+        }
+        .information:link{
+            color:#666;
+        }
+        .information:visited{
+            color:#666;
+        }
+        div.caption{
+            margin-left: 30pt;
+        }
+        div.column{
+            margin: auto;
+            text-align: center;
+            float: left;
+        }
+        div.column2{
+            height: 220pt;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            float: left;
+            position: absolute;
+        }
+        a.username{
+            font-size: 18px;
+        }
+        a:link{
+            color : #5851bb;
+        }
+        a:visited{
+            color : #913551;
+        }
+        input.number{
+            width: 30pt;
+        }
+        input.longnumber{
+            width: 50pt;
+        }
+        input[type="number"] {
+            font-size: 16px;
+            font-family: 'segoe UI', 'Hiragino Maru Gothic ProN', Meiryo, Arial, sans-serif;
+            background-color: #282828;
+            color:#ddd;
+            border:1px solid #444;
+            padding:2px;
+            border-radius:3px;
+        }
+        div.button {
+            margin: 20pt;
+        }
+        span.button {
+            color: #ffffff;
+            background: #000000;
+            font-weight: bold;
+            font-size: 18px;
+            font-family: 'segoe UI', 'Hiragino Maru Gothic ProN', Meiryo, Arial, sans-serif;
+            padding: 8px 24px;
+            border-radius: 12px;
+            text-align: center;
+            transition: .3s;
+            cursor:pointer;
+        }
+        span.button:hover {
+            color: #e0ac1c;
+            background: #ffffff;
+        }
+        img.symbol {
+            width: 25px;
+            height: 25px;
+            position: relative;
+            top: 7px;
+            mix-blend-mode: lighten;
+        }
+        img.current {
+            opacity: 0.8;
+        }
+        img.past {
+            opacity: 0.2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>
+        Journey, Show Me Again Companions Met Along the Way
+        </h2>
+        <p class="information">
+            for Steam (<a href="https://github.com/kysj25/jsmacmatw" class="information" title="go to project page">github</a>)<br>
+        </p>
+        <p class="information">
+            Chrome:&#9786; &nbsp; FireFox:&#9786; &nbsp; Edge:&#9785;
+        </p>
+
+        <div style="display: flex; justify-content: center;">
+            <div style="margin: auto;">
+
+                <div class="caption column2">
+                    <div id="COMPANIONS"></div>
+                </div>
+
+                <div id="ground" class="column" style="display:block;">
+                    <svg width="258pt" height="220pt" viewBox="0 0 322.44663 275.46848">
+                        <g transform="translate(-96.454126,-366.64847)">
+                            <path style="fill:none;fill-rule:evenodd;stroke:#444444;stroke-width:6;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                            d="m 339.92078,431.80636 c 12.63412,-16.1949 20.85815,-28.07848 28.65065,-50.15844 5.73944,18.83471 26.63798,16.33648 35.32934,9.76461 -0.36411,18.6033 -4.60595,34.76472 -7.65416,50.05729 -3.95268,17.59104 -6.03621,29.24923 -10.27366,46.98 -4.43886,16.47552 -9.02042,38.16765 -14.19691,57.00967 -7.13788,22.58478 -12.95065,45.3453 -22.34761,65.86752 -10.64401,1.91911 -22.29513,-18.56926 -35.3244,-16.40127 -15.44873,5.11681 -29.82441,26.99355 -45.61926,32.19137 4.77595,-10.64198 23.84365,-35.43763 23.65265,-45.21996 -12.02483,-4.63323 -21.27844,-19.48235 -36.55181,-14.16846 -16.82283,3.32848 -31.15602,5.36674 -49.03186,7.00571 14.73975,-9.17071 28.11798,-14.11778 40.77966,-25.02245 -7.44405,-11.55628 -26.48455,-40.31301 -32.67727,-54.33004 -4.79406,-11.60368 -3.29239,-10.25154 7.8778,-13.12936 30.43479,-5.76771 57.16953,-14.77846 80.76613,-24.33295 11.67877,-4.77199 23.26013,-12.89386 33.2063,-20.22712 -13.9969,-0.15186 -29.34567,-1.48992 -42.5328,-6.71818 -19.80395,-7.54887 -41.74885,-14.82817 -63.4482,-14.58178 -16.84258,0.19124 -31.06635,3.64732 -48.97747,12.43336 -24.48545,11.59644 -40.17073,28.6208 -53.60064,50.81047 -10.82599,20.35102 -16.68119,57.15702 -16.48834,80.45665" />
+                        </g>
+                    </svg>
+                </div>
+                <div id="flight" class="column" style="display:none">
+                    <svg width="303pt" height="232pt" viewBox="0 0 379.33958 289.75342" style="display:inline">
+                        <g transform="translate(-39.561154,-352.36354)">
+                        <path style="fill:none;fill-rule:evenodd;stroke:#444444;stroke-width:6;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                        d="m 339.92078,431.80636 c 12.63412,-16.1949 20.85815,-28.07848 28.65065,-50.15844 5.73944,18.83471 26.63798,16.33648 35.32934,9.76461 -0.36411,18.6033 -4.60595,34.76472 -7.65416,50.05729 -3.95268,17.59104 -6.03621,29.24923 -10.27366,46.98 -4.43886,16.47552 -9.02042,38.16765 -14.19691,57.00967 -7.13788,22.58478 -12.95065,45.3453 -22.34761,65.86752 -10.64401,1.91911 -22.29513,-18.56926 -35.3244,-16.40127 -15.44873,5.11681 -29.82441,26.99355 -45.61926,32.19137 4.77595,-10.64198 23.84365,-35.43763 23.65265,-45.21996 -12.02483,-4.63323 -21.27844,-19.48235 -36.55181,-14.16846 -16.82283,3.32848 -31.15602,5.36674 -49.03186,7.00571 14.73975,-9.17071 28.11798,-14.11778 40.77966,-25.02245 -7.44405,-11.55628 -26.48455,-40.31301 -32.67727,-54.33004 -4.79406,-11.60368 -3.29239,-10.25154 7.8778,-13.12936 30.43479,-5.76771 57.16953,-14.77846 80.76613,-24.33295 11.67877,-4.77199 23.26013,-12.89386 33.2063,-20.22712 -13.9969,-0.15186 -29.34567,-1.48992 -42.5328,-6.71818 -19.80395,-7.54887 -38.81311,-17.45082 -59.40759,-22.663 -15.06744,-6.51956 -33.59173,-2.4136 -44.43178,9.90798 -14.47357,16.91596 -34.82196,3.16339 -41.57194,-13.25654 -7.66004,-21.55605 -33.34233,-16.45406 -50.414499,-11.69443 -15.371677,7.21903 -26.277635,-1.93691 -31.640625,-16.01292 -3.271507,-4.7854 -8.228547,-9.69256 -14.364279,-9.89319" />
+                        </g>
+                    </svg>
+                </div>
+
+                <div style="clear:left;"></div>
+            </div>
+        </div>
+
+        <div class="button">
+            <label for="inputfile">
+            <span class="button">Select SAVE.BIN</span>
+            <input id="inputfile" type="file" accept=".bin" style="display:none;"/>
+            </label>
+        </div>
+
+        <div id="selectfilemessage" class="information" style="display:block">
+            <p>
+                SAVE.BIN is usually found in<br>
+                "C:/users/(your username)/appdata/local/annapurna interactive/journey/steam" or<br>
+                "C:/Program Files (x86)/Steam/userdata/(your steam ID)/638230/remote".<br>
+            </p>
+            <p>
+                If you can't find SAVE.BIN, try to show hidden files according to the following help.<br>
+                <a class="information" href="https://support.microsoft.com/en-us/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2" target="_blank">Show hidden files</a>
+                (<a class="information" href="https://support.microsoft.com/ja-jp/windows/%E9%9A%A0%E3%81%97%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B-0320fe58-0117-fd59-6851-9b7f9840fdb2" target="_blank"><span style="font-size:small;">隠しファイルを表示する</span></a>)
+            </p>
+        </div>
+
+        <div id="contextview" style="display: none">
+            <p>
+                <a id="download" class="information" download="SAVE.BIN" href="javascript:downloadFile()">
+                    Download SAVE.BIN
+                </a>
+            </p>
+            <div id="hidedetails">
+                <p>
+                    <a href="#" class="information" onclick="showDetails(true);">
+                        Show SAVE.BIN details
+                    </a>
+                    <br>
+                    <span class="information">(contain spoilers!)</span><br>
+                    <br>
+                </p>
+            </div>
+            <div id="showdetails" style="display: none;">
+                <p>
+                    REBIRTH COUNT : <input id="REBIRTH_COUNT" class="longnumber" type="number" /><br>
+                    CLOAK : <input id="CLOAK" class="number" type="number" /><br>
+                </p>
+                <div class="caption">
+                    0～3 : Red Cloak 1st～4th<br>
+                    4～6 : White Cloak 2nd～4th<br>
+                </div>
+                <p>
+                    SCARF LENGTH : <input id="SCARF_LENGTH" class="number" type="number" /><br>
+                    CURRENT SYMBOL : <input id="CURRENT_SYMBOL" class="number" type="number" /><br>
+                    CURRENT LEVEL : <input id="CURRENT_LEVEL" class="number" type="number" /><br>
+                </p>
+                <div class="caption">
+                    0 : Hub(Chapter Select)<br>
+                    1 : Broken Bridge<br>
+                    2 : Pink Desert<br>
+                    3 : Sunken City<br>
+                    4 : Underground<br>
+                    5 : Tower<br>
+                    6 : Snow<br>
+                    7 : Paradise<br>
+                    8 : Credits<br>
+                    9 : Level09<br>
+                    10 : Credits1<br>
+                    11 : Credits2<br>
+                </div>
+                <p>
+                    COLLECTED SYMBOLS : <input id="COLLECTED_SYMBOLS" class="number" type="number" /><br>
+                    FOUND HUB : 
+                    <input id="FOUND_HUB_3" type="checkbox" style="display:none;" />
+                    <input id="FOUND_HUB_2" type="checkbox" />
+                    <input id="FOUND_HUB_1" type="checkbox" />
+                    <input id="FOUND_HUB_0" type="checkbox" />
+                    <br>
+                    FOUND BB : 
+                    <input id="FOUND_BB_3" type="checkbox" style="display:none;" />
+                    <input id="FOUND_BB_2" type="checkbox" />
+                    <input id="FOUND_BB_1" type="checkbox" />
+                    <input id="FOUND_BB_0" type="checkbox" />
+                    <br>
+                    FOUND PD : 
+                    <input id="FOUND_PD_3" type="checkbox" />
+                    <input id="FOUND_PD_2" type="checkbox" />
+                    <input id="FOUND_PD_1" type="checkbox" />
+                    <input id="FOUND_PD_0" type="checkbox" />
+                    <br>
+                    FOUND SC : 
+                    <input id="FOUND_SC_3" type="checkbox" style="display:none;" />
+                    <input id="FOUND_SC_2" type="checkbox" />
+                    <input id="FOUND_SC_1" type="checkbox" />
+                    <input id="FOUND_SC_0" type="checkbox" />
+                    <br>
+                    FOUND UG : 
+                    <input id="FOUND_UG_3" type="checkbox" />
+                    <input id="FOUND_UG_2" type="checkbox" />
+                    <input id="FOUND_UG_1" type="checkbox" />
+                    <input id="FOUND_UG_0" type="checkbox" />
+                    <br>
+                    FOUND TOWER : 
+                    <input id="FOUND_TOWER_3" type="checkbox" />
+                    <input id="FOUND_TOWER_2" type="checkbox" />
+                    <input id="FOUND_TOWER_1" type="checkbox" />
+                    <input id="FOUND_TOWER_0" type="checkbox" />
+                    <br>
+                    ( FOUND LEVEL09 : 
+                    <input id="FOUND_LEVEL09_3" type="checkbox" />
+                    <input id="FOUND_LEVEL09_2" type="checkbox" />
+                    <input id="FOUND_LEVEL09_1" type="checkbox" />
+                    <input id="FOUND_LEVEL09_0" type="checkbox" />
+                    )<br>
+                </p>
+                <p>
+                    <a href="#" class="information" onclick="showDetails(false);">
+                        Hide SAVE.BIN details
+                    </a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Offset within the save files
+        const OFFSET_CONTINUE = 0x03 // 0x03 on PS3
+        const OFFSET_CLOAK = 0x08 // 0x0B on PS3
+        const OFFSET_SCARF_LENGTH = 0x10 // 0x13 on PS3
+        const OFFSET_CURRENT_SYMBOL = 0x14 // 0x0F on PS3
+        const OFFSET_CURRENT_LEVEL = 0x18 // 0x17 on PS3
+        const OFFSET_COLLECTED_SYMBOLS = 0x24 // 0x23 on PS3 // without Level09's
+        const OFFSET_FOUND_HUB = 0x54 // 0x53 on PS3
+        const OFFSET_FOUND_BB = 0x1AC // 0x63 on PS3
+        const OFFSET_FOUND_PD = 0x304 // 0x73 on PS3
+        const OFFSET_FOUND_SC = 0x45C // 0x83 on PS3
+        const OFFSET_FOUND_UG = 0x5B4 // 0x93 on PS3
+        const OFFSET_FOUND_TOWER = 0x70C // 0xA3 on PS3
+        const OFFSET_FOUND_LEVEL09 = 0xC6C // 0xE3 on PS3
+        // refference to:
+        // "[JSE] - The PC Journey Save Editor for Windows"
+        // https://github.com/Daratrixx/JSE
+
+        const OFFSET_COMPANION = 0x19A8;
+        const LENGTH_MAX_COMPANIONS = 8;
+        const LENGTH_COMPANION_SECTION = 32;
+        const LENGTH_COMPANION_NAME = 24;
+        const SUBOFFSET_COMPANION_ID = 24;
+        const LENGTH_COMPANION_ID = 4;
+        // refference to:
+        // "Find recent companions and their Steam profiles from a Journey SAVE.BIN file"
+        // https://gist.github.com/Peksa/8059367b4f1a620df0ed9cba3ff6d5d2
+
+        const OFFSET_REBIRTH_COUNT = 0x4C;
+        const LENGTH_REBIRTH_COUNT = 4;
+        const OFFSET_CURRENT_COMPANION_NUM = 0x1588;
+        const LENGTH_CURRENT_COMPANION_NUM = 4;
+
+        const OFFSET_COMPANION_SYM = 0x11C8;
+        const LENGTH_COMPANION_SYM_SECTION = 0x3C;
+        const SUBOFFSET_COMPANION_SYM = 0x38;
+        const HEADER = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAMAAADzN3VRAAADAFBMVEUAAAA";
+        const SYMBOLIMAGE_DATA_URI = [
+        HEADER + "NDQ0TExMUFBQdHR0mJiY5OTlWVlZXV1dYWFhxcXGcnJypqamqqqqtra2urq7r6+vt7e3x8fH9/f3///8" + "A".repeat(939) + "B2g8EAAAAACXBIWXMAAAsSAAALEgHS3X78AAAAaUlEQVQokZ2SSwrAIAxEJx/cBDeS+5+1+CnY0iDNWykPcTIKpCBVAUSV9mVH3Q2o7gx2r4C568GwWXmYYsbbbZt58WWkdtoybezkTjAZZqIHQ7zoORd0aic8k0kQz5NpJ+4683LxP/jNBS8oDlGTxiUJAAAAAElFTkSuQmCC",
+        HEADER + "HBwcNDQ0UFBQdHR05OTlPT09WVlZXV1dYWFhxcXGcnJyoqKipqamqqqqtra2urq6wsLDi4uLr6+v4+Pj///8" + "A".repeat(935) + "BN2rRrAAAACXBIWXMAAAsSAAALEgHS3X78AAAAWklEQVQokcWSSwrAMAhEx4lZDQQS6P2v2p+BbNpCKO1byODDhSIwhWU/yDbGHV8Cgj36s6lSC9OkOhgBJUwB9LUxcluMJKKejfvrXM78v8/L18megBR/0OMUK6hpEDnN/iE0AAAAAElFTkSuQmCC",
+        HEADER + "HBwcNDQ0ODg4TExMUFBQdHR0mJiY5OTlPT09SUlJVVVVWVlZXV1dYWFhjY2NxcXGcnJypqamqqqqtra2urq7Gxsbr6+vt7e3w8PDx8fHy8vL9/f3///8" + "A".repeat(903) + "B8FNahAAAACXBIWXMAAAsSAAALEgHS3X78AAAAgklEQVQokZ2S4QqAIAyEU45BxGAwiAh8/9ds2VESWNH36+BDnOeG4RdZBIzpijtSijGiFP9qZlXQLKrSmGCkCfSrmd0zzeKOxgSgCeTFJJDUxmf6Z/5MACf1PWuNuF95a7RvYBalTWaZZjQ724n/cU4QxprZOubYA4gk7kHE/NJOhw2zUBQ1FfkWGwAAAABJRU5ErkJggg==",
+        HEADER + "CAgIHBwcNDQ0PDw8SEhITExMUFBQdHR0mJiY5OTlPT09WVlZXV1dYWFhxcXGcnJynp6eoqKipqamqqqqtra2urq6wsLDGxsbZ2dni4uLr6+vs7Ozt7e3w8PD4+Pj9/f3///8" + "A".repeat(887) + "Cu2iO0AAAACXBIWXMAAAsSAAALEgHS3X78AAAAh0lEQVQokaXSwQrDIAyA4STNSCEHIQfLSnfI+7/k3EzRFWSO/afAhxBUgD9iEQSUiDrJ7gzskXyRJaW1yWG2nyLu1iQD2JQcOT9egqrrp9Q4lpkQ5AhDqI2jyhlq49JJ3bpe3nvrOdlUOWRXvXVS0pBSmpXNjELuZny9g8v7jIXOxx/8gx96AjRXF9v3n57YAAAAAElFTkSuQmCC",
+        HEADER + "HBwcNDQ0ODg4PDw8TExMUFBQdHR0mJiY5OTlPT09VVVVWVlZXV1dYWFhjY2NxcXGcnJynp6eoqKipqamqqqqtra2urq6wsLDGxsbi4uLr6+vt7e3w8PDx8fHy8vL4+Pj9/f3///8" + "A".repeat(883) + "DmJTG1AAAACXBIWXMAAAsSAAALEgHS3X78AAAAdElEQVQokaWSuwrAMAgANTU4dAg4WPoc8v8fWUscMrSkJDcJp8shQBeBHQRkjpXh7BBQzvrX7CKnmyMlrowAqBsjdZhDl/huDG4YJAoAExE+YwEbdapFG6fxOqfq5Wab51iZ8TqrCHXXsT+w4+h/UAiNOh/cN2cahhmGFGoAAAAASUVORK5CYII=",
+        HEADER + "HBwcNDQ0PDw8TExMUFBQdHR0mJiY5OTlPT09SUlJWVlZXV1dYWFhxcXGcnJynp6epqamqqqqtra2urq6wsLDGxsbr6+vt7e3w8PDx8fH4+Pj9/f3///8" + "A".repeat(904) + "6vACnAAAACXBIWXMAAAsSAAALEgHS3X78AAAAhElEQVQokaXSwQqEMAxF0caEDF0EAoEyCPn/39TSSK3iVJi7enAQJZjSHxEzxMQ+a+ZOMdWdJ4Iiny4kUg5hd+2SvfZCvmZrlcWsjNKihMecCVAE5/k7IGztzyAuJxnfY6+ErLaGlJwpDVn/apkLquZBiipeL3q/zoMAM8Z/sM/W7DoPbWVQFPVNaXbDAAAAAElFTkSuQmCC",
+        HEADER + "CAgIHBwcNDQ0PDw8SEhITExMUFBQdHR0mJiY5OTlPT09WVlZXV1dYWFhxcXGcnJyoqKipqamtra2urq6wsLDZ2dni4uLr6+vs7Ozt7e3w8PDx8fH4+Pj9/f3///8" + "A".repeat(895) + "CJRitFAAAACXBIWXMAAAsSAAALEgHS3X78AAAAeUlEQVQokZ2SMQrAIAxFNQ0O2TIEih16/1vWqAGlpLZ904enmHwM4ReQOjFEi1BNOjsY0GJaGGQlq4EadzMNUdPgtUFRDjVbjXk9gW8iduIYnykHYa7L7pR3eDI8TOAbIbI1kUjmqakbuu3jG2EG7VpedeAb/x985gKy1RgpZyQAWgAAAABJRU5ErkJggg==",
+        HEADER + "CAgIHBwcNDQ0ODg4SEhIUFBQdHR05OTlPT09VVVVWVlZXV1dYWFhjY2NxcXGcnJyoqKipqamqqqqtra2urq6wsLDZ2dni4uLr6+vs7Ozw8PDx8fHy8vL4+Pj///8" + "A".repeat(895) + "CPcOjSAAAACXBIWXMAAAsSAAALEgHS3X78AAAAgklEQVQokaXSwQqAIAyAYSfDgYfBDoPssvd/yywXKREK/SfhU5RhCD9CIghAhC9RMwxopquSmItLYU6dsJ1dUuO5oGoZpKi2F5J5t9RoIoAe9MuV4rMxjmeuGbTkvudbYs7JBXKmTuqrZZjommwiu8suss1n8C2RvPMfpLaMS9N5dQCIgBaNkeIHEgAAAABJRU5ErkJggg==",
+        HEADER + "HBwcNDQ0ODg4UFBQdHR05OTlPT09VVVVWVlZXV1dYWFhjY2NxcXGcnJypqamqqqqtra2urq7r6+vw8PDx8fHy8vL///8" + "A".repeat(927) + "DljAVXAAAACXBIWXMAAAsSAAALEgHS3X78AAAAdElEQVQokZ2SQQrFIAxER4fZKCULF7n/Tdv/G0uhiuBbBV4cwiCwRZIIUEoxPsj9AMydoLttmFaKxuaibphmxrG50MIkMgOZvwQGadVOX/y8UQ8fXTAxNGthsgVP4yXMl7lRre2fdgTvpVEHK9P/wc2qnQknP0sQuyZXgMsAAAAASUVORK5CYII=",
+        HEADER + "CAgIHBwcNDQ0ODg4PDw8SEhITExMUFBQdHR0mJiY5OTlPT09SUlJVVVVWVlZXV1dYWFhjY2NxcXGcnJynp6epqamqqqqtra2urq6wsLDGxsbZ2dnr6+vs7Ozt7e3w8PDx8fHy8vL4+Pj9/f3///8" + "A".repeat(871) + "CGXMwvAAAACXBIWXMAAAsSAAALEgHS3X78AAAAgUlEQVQokaXSwQqDQAxF0RmnkSyyCWQTUXf5/1/sVN7QQKHaelcPzoAQLOVGxFzfc0riEYRpEXwurLpDZtU1icarQ+SYZ0LuO6S5b0k4EBUa80wqoZrn9/rD9jnxHRsXi/Crsog8IJvInKQnkJ5elcWsQVYz+vs6E6N+nTHzf/BDT68mGubskqayAAAAAElFTkSuQmCC",
+        HEADER + "HBwcNDQ0UFBQdHR05OTlPT09WVlZXV1dYWFhxcXGcnJypqamqqqqtra2urq7r6+vx8fH///8" + "A".repeat(947) + "De6ITEAAAACXBIWXMAAAsSAAALEgHS3X78AAAAXUlEQVQokZ2SQQrAQAgDY1ZaEE/5/2OLbY+VsuYggSDEQWAkcyew3K3sAli25FIAKRGUEgjJfxJGHN/Jo71kZZ67DfrESLtn9Xyt/dFpdyYN+nsmdHrWIzrtH2zrAic1C/X6Irk8AAAAAElFTkSuQmCC",
+        HEADER + "HBwcNDQ0UFBQdHR05OTlPT09WVlZXV1dYWFhxcXGcnJypqamqqqqtra2urq7r6+vw8PDx8fH///8" + "A".repeat(943) + "C6AXoVAAAACXBIWXMAAAsSAAALEgHS3X78AAAAbUlEQVQokZ2SQQrAIAwE1ygKiqf+/69d6Qa8iDRzCoTouAYIkYpIe7kojzCYl+XSsf4xeNpQbTExkqfgPV7msFsysTxFuqVznIkYnN8TgVlXoCnrBlTPmgYdmDKYQN/cDh1+Poez9oBW5nvwmxfqCgyRnUAo3wAAAABJRU5ErkJggg==",
+        HEADER + "CAgIHBwcNDQ0PDw8SEhIUFBQdHR05OTlPT09WVlZXV1dYWFhxcXGcnJyoqKipqamqqqqtra2urq6wsLDZ2dni4uLr6+vs7Ozw8PD4+Pj///8" + "A".repeat(911) + "CLw63XAAAACXBIWXMAAAsSAAALEgHS3X78AAAAcElEQVQokaWSQQrAIAwEN67kIIgQKD30//+sSgqWHmzrXFxYUDME+IWoI2Ns6OEQvKLOm600AkI/t6Ept4fL2yab1dvM8qMx/4G9aoQMQCBljBM7dGSMC3Z2a/R5Kvu6neSu06odVQLR9yACvPbgMyfBexOP/+RyKgAAAABJRU5ErkJggg==",
+        HEADER + "CAgIHBwcNDQ0PDw8SEhIUFBQdHR05OTlPT09WVlZXV1dYWFhxcXGcnJypqamqqqqtra2urq6wsLDZ2dnr6+vs7Oz4+Pj///8" + "A".repeat(923) + "DPLgbxAAAACXBIWXMAAAsSAAALEgHS3X78AAAAdElEQVQokZ2SuQ4AIQhE0dGCgoKO///SFY8tjInHqyZ5JshB9ETIneAxEcGjk60DgpkSiVk+MioS14Y93hhlxtpIb+DYBCCOpmuMQNhNZ374x1ZHfQaN6Qd7A2ZdG64TuTBRRNcGY1U7U5ZfKqR+B+MknvgAJHoRbzBcJIcAAAAASUVORK5CYII=",
+        HEADER + "BAQECAgIDAwMEBAQHBwcNDQ0PDw8SEhITExMUFBQdHR0mJiYqKio2NjY5OTlHR0dPT09SUlJWVlZXV1dYWFhhYWFxcXGBgYGcnJyfn5+pqamqqqqtra2urq6wsLC4uLjGxsbHx8fLy8vPz8/R0dHS0tLZ2dnr6+vs7Ozt7e3w8PD4+Pj9/f3///8" + "A".repeat(835) + "DoerzLAAAACXBIWXMAAAsSAAALEgHS3X78AAAAjUlEQVQokdWSuw7DIAxFLwm61EwsGZhqRZ39/59XXomSoWnUrYcBW8cWRjLwE1MUAkGig4sSAEqcmhGzDDzNCJopkM3kj40jZ8CTroYemGt4TSnsbIV7T3mnw2GOE1yal6qvGVPSs0mjIbXshlmX5dGmylnPJo8GbsN8M30P+qejNMYefIKhncLhKkF4A0wHId8ZJOVdAAAAAElFTkSuQmCC",
+        HEADER + "CAgIHBwcNDQ0PDw8SEhITExMUFBQdHR0mJiY5OTlPT09WVlZXV1dYWFhxcXGcnJyoqKipqamqqqqtra2urq6wsLDZ2dni4uLr6+vs7Ozt7e3w8PDx8fH4+Pj9/f3///8" + "A".repeat(891) + "CllKGyAAAACXBIWXMAAAsSAAALEgHS3X78AAAAdUlEQVQokaXSsQrAIAwEUE0lLRWUDBmKDvn/r2xpU0wnLd508OJy6NxEAqJvFYywSNBKItiRJedNBVLajaAIqQQRHpXCXFUqczHy5JYnPfFB420dydIO4fvm3zoQI6r4GNf5dQ6iolKIjpl1ADXXOm+1/+BHTgdkFvieaUxKAAAAAElFTkSuQmCC",
+        HEADER + "HBwcNDQ0PDw8TExMUFBQdHR0mJiY5OTlPT09WVlZXV1dYWFhxcXGcnJyoqKipqamqqqqtra2urq6wsLDi4uLr6+vt7e34+Pj9/f3///8" + "A".repeat(915) + "BM/cNXAAAACXBIWXMAAAsSAAALEgHS3X78AAAAa0lEQVQokcWSQQqAMAwEt0b3GDBgBP//UGtNoQeloKBzWhh6yFDgEYlTgamdB9MWCKRO9s2i6mFcdWmMAhbGAP3aJJEBGETyrjP16khQ3py8quNma5jVzP+pM1/VIfORI8s/4JjPJXt1btgBrjEV7jqRJEQAAAAASUVORK5CYII=",
+        HEADER + "HBwcNDQ0ODg4TExMUFBQdHR0mJiY5OTlPT09VVVVWVlZXV1dYWFhjY2NxcXGcnJynp6epqamqqqqtra2urq7Gxsbr6+vt7e3w8PDx8fHy8vL9/f3///8" + "A".repeat(904) + "JGs9OAAAACXBIWXMAAAsSAAALEgHS3X78AAAAdUlEQVQokaWSQQrAIAwEoy4BDwEhIF76/29W2ggVkbY6p4UhaJYQLeHZcORa9JfhwwCFFvnFIKXcmZwS2lPSGXl8Ym4QYzaTYwR1qBkdtpobD9RNAf+pHYdwU2cs1fHldlRLZ4rqVjssUswUEd5vB3YHGMwPTpNSFPnp6U2uAAAAAElFTkSuQmCC",
+        HEADER + "HBwcNDQ0ODg4TExMUFBQdHR0mJiY5OTlPT09VVVVWVlZXV1dYWFhjY2NxcXGcnJynp6epqamqqqqtra2urq7Gxsbr6+vt7e3w8PDx8fHy8vL9/f3///8" + "A".repeat(904) + "JGs9OAAAACXBIWXMAAAsSAAALEgHS3X78AAAAgUlEQVQokaWSywrEIAxFY3IJdCEIQmc2+f/fbE3jMNMi08fBReAkqFeJHgDVREkD/jLVDAQL9L/RnN/NcAnQTfZG0JGBQa2vMFyDrUn7tocTjE0CxFdqpVdreQYWn2kDuxnPQC6kg2mazWR/n1vplDL3dH6z/mQg59Ph/viDf3CBBbH9FQW7WILjAAAAAElFTkSuQmCC",
+        HEADER + "NDQ0ODg4PDw8TExMUFBQdHR0mJiY5OTlVVVVWVlZXV1dYWFhjY2NxcXGcnJypqamqqqqtra2urq6wsLDr6+vt7e3x8fHy8vL4+Pj9/f3///8" + "A".repeat(912) + "vaRQ3AAAACXBIWXMAAAsSAAALEgHS3X78AAAAc0lEQVQokb2SsQqAMAxEryRkCgg3tEL+/z+1WqEditLBNx08Qo4QYIlkJoCapRoVkBorFrEBjBBIBIEtwv42hdyb2cnSmZvL3LyZJI0zPzG9XWc6s9JAyTyYTOqzygfjXYm5MffcTHa3sXt3UXw13R+scwBASBUrVzYROwAAAABJRU5ErkJggg==",
+        HEADER + "NDQ0ODg4UFBQdHR05OTlVVVVWVlZXV1dYWFhjY2OcnJypqamqqqqtra3r6+vx8fHy8vL///8" + "A".repeat(947) + "DVGTD6AAAACXBIWXMAAAsSAAALEgHS3X78AAAAZUlEQVQokaWS0QqAMAhFdd4HHwTB///YVm1QhFut8yQcBL1K9AMBmBiQh7GIQiXC3hqoejOuiovR2DlMRedGzPxm3OycENHopoKJ4dKodS95kkveszJBvs9KOsOs8/sMTf4HH9gAmMoNEUBKwWAAAAAASUVORK5CYII=",
+        ];
+
+        document.getElementById('inputfile').addEventListener("change", function(e) { loadFile(e.target.files[0]); },false);
+        document.getElementById('inputfile').addEventListener("click", function(e) { this.value = null; },false);
+
+        let currentContext;
+
+        function loadFile(f){
+            let reader = new FileReader();
+            reader.readAsArrayBuffer(f);
+            reader.onload=function(e){
+                document.getElementById('selectfilemessage').style.display = "none";
+                document.getElementById('contextview').style.display = "block";
+                document.getElementById('ground').style.display = "none";
+                document.getElementById('flight').style.display = "block";
+                currentContext = new Uint8Array(e.target.result);
+                restoreCurrentContext();
+            }
+        }
+
+        let downloading = false;
+        function downloadFile(){
+            if( downloading ){
+            }
+            else{
+                backupCurrentContext();
+                let blob = new Blob([ currentContext ], { "type" : "application/x-download" });
+                if (window.navigator.msSaveBlob) { 
+                    window.navigator.msSaveBlob(blob, document.getElementById("download").download); 
+                    window.navigator.msSaveOrOpenBlob(blob, document.getElementById("download").download); 
+                } else {
+                    document.getElementById("download").href = window.URL.createObjectURL(blob);
+                }
+                downloading = true;
+                document.getElementById("download").click();
+                document.getElementById("download").href="javascript:downloadFile()"
+                downloading = false;
+            }
+        }
+
+        function getMultibyteValue(offset, length){
+            let value = 0;
+            for(let i = 0; i < length; i++){
+                value += currentContext[offset + i]<<(i*8);
+            }
+            return value;
+        }
+
+        function setMultibyteValue(offset, length, value){
+            for(let i = 0; i < length; i++){
+                currentContext[offset + i] = (value>>(i*8)) & 0xFF;
+            }
+            return value;
+        }
+
+        function restoreCurrentContext(){
+            document.getElementById('REBIRTH_COUNT').value = getMultibyteValue(OFFSET_REBIRTH_COUNT, LENGTH_REBIRTH_COUNT);
+            document.getElementById('CLOAK').value = currentContext[OFFSET_CLOAK];
+            document.getElementById('SCARF_LENGTH').value = currentContext[OFFSET_SCARF_LENGTH];
+            document.getElementById('CURRENT_SYMBOL').value = currentContext[OFFSET_CURRENT_SYMBOL];
+            document.getElementById('CURRENT_LEVEL').value = currentContext[OFFSET_CURRENT_LEVEL];
+            document.getElementById('COLLECTED_SYMBOLS').value = currentContext[OFFSET_COLLECTED_SYMBOLS];
+
+            for( let i = 0; i < 4; i++){
+                document.getElementById('FOUND_HUB_'+String(i)).checked = (currentContext[OFFSET_FOUND_HUB] & (1<<i)) != 0;
+                document.getElementById('FOUND_BB_'+String(i)).checked = (currentContext[OFFSET_FOUND_BB] & (1<<i)) != 0;
+                document.getElementById('FOUND_PD_'+String(i)).checked = (currentContext[OFFSET_FOUND_PD] & (1<<i)) != 0;
+                document.getElementById('FOUND_SC_'+String(i)).checked = (currentContext[OFFSET_FOUND_SC] & (1<<i)) != 0;
+                document.getElementById('FOUND_UG_'+String(i)).checked = (currentContext[OFFSET_FOUND_UG] & (1<<i)) != 0;
+                document.getElementById('FOUND_TOWER_'+String(i)).checked = (currentContext[OFFSET_FOUND_TOWER] & (1<<i)) != 0;
+                document.getElementById('FOUND_LEVEL09_'+String(i)).checked = (currentContext[OFFSET_FOUND_LEVEL09] & (1<<i)) != 0;
+            }
+
+            let curnum = getMultibyteValue(OFFSET_CURRENT_COMPANION_NUM, LENGTH_CURRENT_COMPANION_NUM);
+
+            let html = "";
+            let imgclass = "current";
+            let decoder = new TextDecoder();
+            for(let i = 0; i < LENGTH_MAX_COMPANIONS; i++){
+                if( i == curnum ){
+                    if( location.search != "?all" ){
+                        break;
+                    }
+                    html += "<br>";
+                    imgclass = "past"; 
+                }
+
+                let index = OFFSET_COMPANION + i * LENGTH_COMPANION_SECTION;
+                let len;
+                for( len = 0; len < LENGTH_COMPANION_NAME; len++){
+                    if( currentContext[index + len] == 0 ){
+                        break;
+                    }
+                }
+                if( len == 0){
+                    continue;
+                }
+                let ar = currentContext.slice(index, index + len);
+                let name = decoder.decode(ar);
+
+                let uid = getMultibyteValue(index + SUBOFFSET_COMPANION_ID, LENGTH_COMPANION_ID);
+                let sid = currentContext[OFFSET_COMPANION_SYM + i * LENGTH_COMPANION_SYM_SECTION + SUBOFFSET_COMPANION_SYM];
+                if( sid < SYMBOLIMAGE_DATA_URI.length ){
+                    html += "<img class=\"symbol " + imgclass + "\" src=\"" + SYMBOLIMAGE_DATA_URI[sid] + "\" /> ";
+                }
+                html += "<a class=\"username\" href=\"https://steamcommunity.com/profiles/[U:1:" + String(uid) + "]\" target=\"_blank\">";
+                html += name;
+                html += "</a><br>";
+            }
+            document.getElementById('COMPANIONS').innerHTML = html;
+        }
+
+        function backupCurrentContext(){
+            setMultibyteValue(OFFSET_REBIRTH_COUNT, LENGTH_REBIRTH_COUNT, document.getElementById('REBIRTH_COUNT').value);
+            currentContext[OFFSET_CLOAK] = document.getElementById('CLOAK').value;
+            currentContext[OFFSET_SCARF_LENGTH] = document.getElementById('SCARF_LENGTH').value;
+            currentContext[OFFSET_CURRENT_SYMBOL] = document.getElementById('CURRENT_SYMBOL').value;
+            currentContext[OFFSET_CURRENT_LEVEL] = document.getElementById('CURRENT_LEVEL').value;
+            currentContext[OFFSET_COLLECTED_SYMBOLS] = document.getElementById('COLLECTED_SYMBOLS').value;
+
+            currentContext[OFFSET_FOUND_HUB] = 
+            currentContext[OFFSET_FOUND_BB] = 
+            currentContext[OFFSET_FOUND_PD] = 
+            currentContext[OFFSET_FOUND_SC] = 
+            currentContext[OFFSET_FOUND_UG] = 
+            currentContext[OFFSET_FOUND_TOWER] = 
+            currentContext[OFFSET_FOUND_LEVEL09] = 0;
+            for( let i = 0; i < 4; i++){
+                currentContext[OFFSET_FOUND_HUB] += (document.getElementById('FOUND_HUB_'+String(i)).checked ? 1 : 0)<<i;
+                currentContext[OFFSET_FOUND_BB] += (document.getElementById('FOUND_BB_'+String(i)).checked ? 1 : 0)<<i;
+                currentContext[OFFSET_FOUND_PD] += (document.getElementById('FOUND_PD_'+String(i)).checked ? 1 : 0)<<i;
+                currentContext[OFFSET_FOUND_SC] += (document.getElementById('FOUND_SC_'+String(i)).checked ? 1 : 0)<<i;
+                currentContext[OFFSET_FOUND_UG] += (document.getElementById('FOUND_UG_'+String(i)).checked ? 1 : 0)<<i;
+                currentContext[OFFSET_FOUND_TOWER] += (document.getElementById('FOUND_TOWER_'+String(i)).checked ? 1 : 0)<<i;
+                currentContext[OFFSET_FOUND_LEVEL09] += (document.getElementById('FOUND_LEVEL09_'+String(i)).checked ? 1 : 0)<<i;
+            }
+        }
+
+        function showDetails(isShow){
+            document.getElementById('showdetails').style.display = isShow ? "block" : "none";
+            document.getElementById('hidedetails').style.display = isShow ? "none" : "block";
+        }
+
+    </script>
+
+</body>
+</html>
