@@ -13,4 +13,5 @@ This works on the modern web browsers (at least Chrome and Firefox) and processe
 So once you save the page, you can use it offline.  
 
 I would like to thank pioneers especially Daratrixx and Peksa, and my companions.  
-I hope this is somewhat helpful for good game experiences.  
+Though I hope this is somewhat helpful for good relationships, finally I don't recommend this actively.  
+Because close friends able to meet only once-in-a-lifetime are also beautiful in memory.  
