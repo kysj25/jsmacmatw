@@ -95,7 +95,14 @@
             top: 7px;
             mix-blend-mode: lighten;
         }
-        img.current {
+        img.minisymbol {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 5px;
+            mix-blend-mode: lighten;
+        }
+       img.current {
             opacity: 0.8;
         }
         img.past {
@@ -193,7 +200,8 @@
                 </div>
                 <p>
                     SCARF LENGTH : <input id="SCARF_LENGTH" class="number" type="number" /><br>
-                    CURRENT SYMBOL : <input id="CURRENT_SYMBOL" class="number" type="number" /><br>
+                    CURRENT SYMBOL : <input id="CURRENT_SYMBOL" class="number" type="number" />
+                    <span id="CURRENT_SYMBOL_IMAGE"></span><br>
                     CURRENT LEVEL : <input id="CURRENT_LEVEL" class="number" type="number" /><br>
                 </p>
                 <div class="caption">
@@ -270,7 +278,7 @@
         const OFFSET_CONTINUE = 0x03 // 0x03 on PS3
         const OFFSET_CLOAK = 0x08 // 0x0B on PS3
         const OFFSET_SCARF_LENGTH = 0x10 // 0x13 on PS3
-        const OFFSET_CURRENT_SYMBOL = 0x14 // 0x0F on PS3
+        const OFFSET_CURRENT_SYMBOL = 0x0C // 0x0F on PS3
         const OFFSET_CURRENT_LEVEL = 0x18 // 0x17 on PS3
         const OFFSET_COLLECTED_SYMBOLS = 0x24 // 0x23 on PS3 // without Level09's
         const OFFSET_FOUND_HUB = 0x54 // 0x53 on PS3
@@ -327,6 +335,7 @@
         HEADER + "NDQ0ODg4UFBQdHR05OTlVVVVWVlZXV1dYWFhjY2OcnJypqamqqqqtra3r6+vx8fHy8vL///8" + "A".repeat(947) + "DVGTD6AAAACXBIWXMAAAsSAAALEgHS3X78AAAAZUlEQVQokaWS0QqAMAhFdd4HHwTB///YVm1QhFut8yQcBL1K9AMBmBiQh7GIQiXC3hqoejOuiovR2DlMRedGzPxm3OycENHopoKJ4dKodS95kkveszJBvs9KOsOs8/sMTf4HH9gAmMoNEUBKwWAAAAAASUVORK5CYII=",
         ];
 
+        document.getElementById('CURRENT_SYMBOL').addEventListener("change", function(e) { displayCurrentSymbol(e.target.value); },false);
         document.getElementById('inputfile').addEventListener("change", function(e) { loadFile(e.target.files[0]); },false);
         document.getElementById('inputfile').addEventListener("click", function(e) { this.value = null; },false);
 
@@ -387,6 +396,7 @@
             document.getElementById('CURRENT_SYMBOL').value = currentContext[OFFSET_CURRENT_SYMBOL];
             document.getElementById('CURRENT_LEVEL').value = currentContext[OFFSET_CURRENT_LEVEL];
             document.getElementById('COLLECTED_SYMBOLS').value = currentContext[OFFSET_COLLECTED_SYMBOLS];
+            displayCurrentSymbol(currentContext[OFFSET_CURRENT_SYMBOL]);
 
             for( let i = 0; i < 4; i++){
                 document.getElementById('FOUND_HUB_'+String(i)).checked = (currentContext[OFFSET_FOUND_HUB] & (1<<i)) != 0;
@@ -405,7 +415,7 @@
             let decoder = new TextDecoder();
             for(let i = 0; i < LENGTH_MAX_COMPANIONS; i++){
                 if( i == curnum ){
-                    if( location.search != "?all" ){
+                    if( location.search == "?currentonly" ){
                         break;
                     }
                     html += "<br>";
@@ -435,6 +445,14 @@
                 html += "</a><br>";
             }
             document.getElementById('COMPANIONS').innerHTML = html;
+        }
+
+        function displayCurrentSymbol(sid){
+            html = "";
+            if( sid >= 0 && sid < SYMBOLIMAGE_DATA_URI.length ){
+                html = "<img class=\"minisymbol current\" src=\"" + SYMBOLIMAGE_DATA_URI[sid] + "\" /> ";
+            }
+            document.getElementById('CURRENT_SYMBOL_IMAGE').innerHTML = html;
         }
 
         function backupCurrentContext(){
